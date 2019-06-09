@@ -1,6 +1,6 @@
 # NLU2019
 NLU2019 project: Question NLI. The task is to determine whether the context sentence contains the answer to the question (entailment or not entailment).
-![IMAGE.png]("NLU2019-project.png") 
+![IMAGE.png]("./NLU2019-project.png") 
 
 ## Usage:
 1. Download dataset.
@@ -34,6 +34,16 @@ $ bash test.sh
 6. Submission. Create a zip of the prediction TSVs, without any subfolders, e.g. using:
 ```bash
 $ zip -r submission.zip *.tsv
+```
+
+## File path tree and annotations:
+```
+├─bert-base-uncased # path to store the cached pretraind `bert` model(automatically download from s3 link)
+├─glue_data  
+│  └─QNLI 	# path to sort GLUE data 
+│      └─results 	# path to store trained model('config.json  eval_results.txt  pytorch_model.bin  vocab.txt') and the prediction results(`QNLI.tsv`)
+├─model 	# main code for this project
+└─submission 	#  submission file
 ```
 
 ## Reference.
