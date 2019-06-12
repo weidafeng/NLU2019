@@ -1,6 +1,6 @@
 # NLU2019
 NLU2019 project: Question NLI. The task is to determine whether the context sentence contains the answer to the question (entailment or not entailment).
-![IMAGE.png]("./NLU2019-project.png") 
+![IMAGE.png](./NLU2019-project.png) 
 
 ## Usage:
 1. Download dataset.
@@ -25,6 +25,13 @@ $ pip install pytorch-pretrained-bert
 ```bash
 $ bash train.sh
 ```
+Here is my results:
+```
+acc = 0.9110378912685337
+eval_loss = 0.501230152572013
+global_step = 16370
+loss = 0.0006768958065624673
+```
 
 5. Predict. You will load the pretrained model to predict, and get the submission `QNLI.tsv` in  `glue_data/QNLI/eval_result`.
 ```bash
@@ -35,6 +42,9 @@ $ bash test.sh
 ```bash
 $ zip -r submission.zip *.tsv
 ```
+Here is my glue result:
+![glue_result](GLUE_RESULTS.png)
+Trained model is too big to store in GitHub, if needed, please feel free to contact me.  
 
 ## File path tree and annotations:
 ```
