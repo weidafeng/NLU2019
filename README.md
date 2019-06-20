@@ -1,6 +1,6 @@
 # NLU2019
 NLU2019 project: Question NLI. The task is to determine whether the context sentence contains the answer to the question (entailment or not entailment).
-![IMAGE.png](./NLU2019-project.png) 
+![IMAGE.png](NLU2019-project.png) 
 
 ## Usage:
 1. Download dataset.
@@ -21,7 +21,13 @@ $ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--c
 $ pip install pytorch-pretrained-bert
 ```
 
-4. Train. You will get the pretrained model flies('config.json  eval_results.txt  pytorch_model.bin  vocab.txt') in `glue_data/QNLI/eval_result`. 
+4. Clone this repository.
+```bash
+$ git clone https://github.com/weidafeng/NLU2019.git  
+$ cd NLU2019
+```
+
+5. Train. You will get the pretrained model flies('config.json  eval_results.txt  pytorch_model.bin  vocab.txt') in `glue_data/QNLI/eval_result`. 
 ```bash
 $ bash train.sh
 ```
@@ -33,12 +39,12 @@ global_step = 16370
 loss = 0.0006768958065624673
 ```
 
-5. Predict. You will load the pretrained model to predict, and get the submission `QNLI.tsv` in  `glue_data/QNLI/eval_result`.
+6. Predict. You will load the pretrained model to predict, and get the submission `QNLI.tsv` in  `glue_data/QNLI/eval_result`.
 ```bash
 $ bash test.sh
 ```
 
-6. Submission. Create a zip of the prediction TSVs, without any subfolders, e.g. using:
+7. Submission. Create a zip of the prediction TSVs, without any subfolders, e.g. using:
 ```bash
 $ zip -r submission.zip *.tsv
 ```
